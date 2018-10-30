@@ -6,9 +6,11 @@ RUN apk add --update --no-cache \
       git \
       openssh \
       mysql \
+      mysql-client \
       tzdata \
       yaml
 
-RUN mkdir /app
-WORKDIR /app
+RUN mkdir /go/src/app
+WORKDIR /go/src/app
 
+EXPOSE 8080

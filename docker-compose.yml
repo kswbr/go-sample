@@ -8,8 +8,7 @@ services:
     links:
       - db
     volumes:
-      - "./app:/app" #共有フォルダの設定
-    stdin_open: true
+      - "./app:/go/src/app" #共有フォルダの設定
     command: go run main.go
 
   db:
